@@ -22,7 +22,9 @@
 
   <!-- 页面元数据 -->
   
-  <title>supredu的博客</title>
+  <title>从0到1完成一个简单的dapp - supredu的博客</title>
+  
+    <meta name="keywords" content="dapp">
   
 
   
@@ -418,10 +420,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               <i class='iconfont icon-miao fa-fw'></i><p>我</p>
             </a>
           
-            <a href="../../../../https:/https:/yinyang001.github.io/"
+            <a href="../../../../https:/yinyang001.github.io/"
               
               
-              id="https:https:yinyang001githubio">
+              id="https:yinyang001githubio">
               <i class='iconfont icon-sheep fa-fw'></i><p>宝贝</p>
             </a>
           
@@ -465,12 +467,100 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
     
+      <h1 class="title">
+        从0到1完成一个简单的dapp
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="/images/author.jpeg">
+    <p>supredu</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt TURQUOISE fa-fw" aria-hidden="true"></i>
+    <p>发布于：2023年2月23日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="从0到1完成一个简单的dapp" data-path="">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
+        
+      </div>
+    
   </div>
 
 
   
   
-  
+  <h2 id="架构：Hardhat-Solidity-ReactJs-Ethers-js-Goerli-Testnet-Netlify"><a href="#架构：Hardhat-Solidity-ReactJs-Ethers-js-Goerli-Testnet-Netlify" class="headerlink" title="架构：Hardhat Solidity ReactJs  Ethers.js | Goerli Testnet | Netlify"></a>架构：Hardhat Solidity ReactJs  Ethers.js | Goerli Testnet | Netlify</h2><h3 id="将项目克隆下来"><a href="#将项目克隆下来" class="headerlink" title="将项目克隆下来"></a>将项目克隆下来</h3><p>git clone <a target="_blank" rel="noopener" href="https://github.com/supredu/TipMeDapp">https://github.com/supredu/TipMeDapp</a></p>
+<p><img src="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230223104459148.png" class="lazyload" data-srcset="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230223104459148.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20230223104459148"></p>
+<h3 id="vscode打开项目文件夹"><a href="#vscode打开项目文件夹" class="headerlink" title="vscode打开项目文件夹"></a>vscode打开项目文件夹</h3><p><img src="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230223103436259.png" class="lazyload" data-srcset="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230223103436259.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20230223103436259"></p>
+<p>终端输入npm install</p>
+<p><img src="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230223104819328.png" class="lazyload" data-srcset="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230223104819328.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20230223104819328"></p>
+<p>终端切换到frontend文件夹输入npm install</p>
+<p><img src="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230223111956565.png" class="lazyload" data-srcset="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230223111956565.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20230223111956565"></p>
+<p>编辑变量</p>
+<p><img src="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230223115805113.png" class="lazyload" data-srcset="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230223115805113.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20230223115805113"></p>
+<h3 id="Alchemy创建app"><a href="#Alchemy创建app" class="headerlink" title="Alchemy创建app"></a>Alchemy创建app</h3><p><img src="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230223120007616.png" class="lazyload" data-srcset="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230223120007616.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20230223120007616"></p>
+<p>复制网址链接粘到GOERLI_url</p>
+<p><img src="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230223120032404.png" class="lazyload" data-srcset="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230223120032404.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20230223120032404"></p>
+<p>导出metamask私钥粘贴到PRIVATE_KEY</p>
+<p><img src="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230223120254025.png" class="lazyload" data-srcset="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230223120254025.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20230223120254025"></p>
+<h3 id="将合约发布到goerli-testnet"><a href="#将合约发布到goerli-testnet" class="headerlink" title="将合约发布到goerli testnet"></a>将合约发布到goerli testnet</h3><p>输入命令npx hardhat run –network goerli scripts/testnet_deploy.js</p>
+<p><img src="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230223213650918.png" class="lazyload" data-srcset="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230223213650918.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20230223213650918"></p>
+<p>将地址粘贴到App.js的contractAddress</p>
+<p><img src="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230223223629431.png" class="lazyload" data-srcset="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230223223629431.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20230223223629431"></p>
+<p>用artifacts/contracts中生成的TipMe.json替换掉frontend/src/contract中的TipMe.json</p>
+<p><img src="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230223223939884.png" class="lazyload" data-srcset="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230223223939884.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20230223223939884"></p>
+<p>切换到frontend目录 使用命令npm start生成网页</p>
+<p><img src="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230223224621465.png" class="lazyload" data-srcset="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230223224621465.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20230223224621465"></p>
+<p><img src="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230223224649400.png" class="lazyload" data-srcset="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230223224649400.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20230223224649400"></p>
+<p>使用metamask与dapp交互</p>
+<p><img src="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230223225017823.png" class="lazyload" data-srcset="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230223225017823.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20230223225017823"></p>
+<p>交互成功</p>
+<p><img src="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230223225110663.png" class="lazyload" data-srcset="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230223225110663.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20230223225110663"></p>
+<h3 id="使用Netlify将合约发布到互联网"><a href="#使用Netlify将合约发布到互联网" class="headerlink" title="使用Netlify将合约发布到互联网"></a>使用Netlify将合约发布到互联网</h3><p>输入命令npm run build</p>
+<p><img src="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230223225417669.png" class="lazyload" data-srcset="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230223225417669.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20230223225417669"></p>
+<p>选择mannualy deployed将build文件夹上传</p>
+<p><img src="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230223230024727.png" class="lazyload" data-srcset="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230223230024727.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20230223230024727"></p>
+<p>生成网页</p>
+<p><img src="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230223230152173.png" class="lazyload" data-srcset="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230223230152173.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20230223230152173"></p>
+<p>修改网页名称</p>
+<p><img src="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230223230300279.png" class="lazyload" data-srcset="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230223230300279.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20230223230300279"></p>
+<p>交互尝试成功</p>
+<p><img src="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230223230448787.png" class="lazyload" data-srcset="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230223230448787.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20230223230448787"></p>
+<p><img src="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230223230531212.png" class="lazyload" data-srcset="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230223230531212.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20230223230531212"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>完整学习了dapp的构成与交互（链端+前端模式），可以以此为基础自行尝试搭建defi或相关有价值的dapp。</p>
+
   
   
     
@@ -487,7 +577,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               
-                <p>本文永久链接是：<a href=http://supredu.github.io/2023/02/21/Untitled/>http://supredu.github.io/2023/02/21/Untitled/</a></p>
+                <p>本文永久链接是：<a href=http://supredu.github.io/2023/02/23/%E4%BB%8E0%E5%88%B01%E5%AE%8C%E6%88%90%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84dapp/>http://supredu.github.io/2023/02/23/%E4%BB%8E0%E5%88%B01%E5%AE%8C%E6%88%90%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84dapp/</a></p>
               
             
           </blockquote>
@@ -504,10 +594,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2023-02-21T11:55:26+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2023-02-23T23:08:46+08:00">
   <a class='notlink'>
     <i class="fas fa-edit GREENSEA fa-fw" aria-hidden="true"></i>
-    <p>更新于：2023年2月21日</p>
+    <p>更新于：2023年2月23日</p>
   </a>
 </div>
 
@@ -515,6 +605,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="../../../../tags/dapp/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>dapp</p></a></div>
+
 
         
       
@@ -526,7 +619,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://supredu.github.io/2023/02/21/Untitled/&title= - supredu的博客&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://supredu.github.io/2023/02/23/%E4%BB%8E0%E5%88%B01%E5%AE%8C%E6%88%90%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84dapp/&title=从0到1完成一个简单的dapp - supredu的博客&summary="
           
           >
           
@@ -538,7 +631,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://supredu.github.io/2023/02/21/Untitled/&title= - supredu的博客&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://supredu.github.io/2023/02/23/%E4%BB%8E0%E5%88%B01%E5%AE%8C%E6%88%90%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84dapp/&title=从0到1完成一个简单的dapp - supredu的博客&summary="
           
           >
           
@@ -550,7 +643,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://supredu.github.io/2023/02/21/Untitled/&title= - supredu的博客&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://supredu.github.io/2023/02/23/%E4%BB%8E0%E5%88%B01%E5%AE%8C%E6%88%90%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84dapp/&title=从0到1完成一个简单的dapp - supredu的博客&summary="
           
           >
           
@@ -580,18 +673,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='../test2/'>
-          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>test2</p>
+      
+        <a class='next' href='../../21/test2/'>
+          <p class='title'>test2<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>图床测试
 
 </p>
-        </a>
-      
-      
-        <a class='next' href='../hardhat%E5%AD%A6%E4%B9%A0/'>
-          <p class='title'>hardhat学习<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>hardhat安装打开命令行工具，输入：
-1234mkdir hardhat-democd hardhat-demonpm init -ynpm install --save-dev hardh...</p>
         </a>
       
     </div>
@@ -624,6 +711,20 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9E%B6%E6%9E%84%EF%BC%9AHardhat-Solidity-ReactJs-Ethers-js-Goerli-Testnet-Netlify"><span class="toc-number">1.</span> <span class="toc-text">架构：Hardhat Solidity ReactJs  Ethers.js | Goerli Testnet | Netlify</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%86%E9%A1%B9%E7%9B%AE%E5%85%8B%E9%9A%86%E4%B8%8B%E6%9D%A5"><span class="toc-number">1.1.</span> <span class="toc-text">将项目克隆下来</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vscode%E6%89%93%E5%BC%80%E9%A1%B9%E7%9B%AE%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="toc-number">1.2.</span> <span class="toc-text">vscode打开项目文件夹</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Alchemy%E5%88%9B%E5%BB%BAapp"><span class="toc-number">1.3.</span> <span class="toc-text">Alchemy创建app</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%86%E5%90%88%E7%BA%A6%E5%8F%91%E5%B8%83%E5%88%B0goerli-testnet"><span class="toc-number">1.4.</span> <span class="toc-text">将合约发布到goerli testnet</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8Netlify%E5%B0%86%E5%90%88%E7%BA%A6%E5%8F%91%E5%B8%83%E5%88%B0%E4%BA%92%E8%81%94%E7%BD%91"><span class="toc-number">1.5.</span> <span class="toc-text">使用Netlify将合约发布到互联网</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">2.</span> <span class="toc-text">总结</span></a></li></ol>
+    </div>
+  </section>
+
 
   
 
@@ -638,8 +739,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="从0到1完成一个简单的dapp";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   // header 这里无论是否开启pjax都需要
