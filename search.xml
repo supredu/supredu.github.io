@@ -4,6 +4,57 @@
   
     
     <entry>
+      <title>stablecoin 学习1</title>
+      <link href="/2023/03/01/stablecoin-%E5%AD%A6%E4%B9%A0/"/>
+      <url>/2023/03/01/stablecoin-%E5%AD%A6%E4%B9%A0/</url>
+      
+        <content type="html"><![CDATA[<h3 id="经济模型"><a href="#经济模型" class="headerlink" title="经济模型"></a>经济模型</h3><p>1代表了一个经济进程</p><p>2含有多种变量</p><p>3变量之间有逻辑上或者数量上的关系</p><h3 id="CeFi-and-DeFi"><a href="#CeFi-and-DeFi" class="headerlink" title="CeFi and DeFi"></a>CeFi and DeFi</h3><p>利率：DeFi&gt;CeFi</p><p>DeFi经济模型的变量包括加密货币的价格、平台抵押率、DeFi的协议费、gas费、使用者的数量、链的tps</p><h3 id="外源性变量与内源性变量"><a href="#外源性变量与内源性变量" class="headerlink" title="外源性变量与内源性变量"></a>外源性变量与内源性变量</h3><p>外源性变量：模型外部决定，并对模型产生影响</p><p>e.g.:在MakerDAO中，抵押物的资产价格是独立于MakerDAO系统的</p><p>内源性变量：由模型决定</p><p>e.g.: Synthetix平台，衍生物由SNX抵押mint出,SNX为平台币。</p><h3 id="银行存款准备金率-银行持有的钱-用户存在银行的钱"><a href="#银行存款准备金率-银行持有的钱-用户存在银行的钱" class="headerlink" title="银行存款准备金率=银行持有的钱/用户存在银行的钱"></a>银行存款准备金率=银行持有的钱/用户存在银行的钱</h3><h3 id="Exchange-Traded-Fund-ETF"><a href="#Exchange-Traded-Fund-ETF" class="headerlink" title="Exchange Traded Fund(ETF)"></a>Exchange Traded Fund(ETF)</h3><p>ETF在市场关闭时也买入卖出</p><p>ETF通常是股票或债券的集合，并由专业人士管理</p><p>ETF类型：债券、股票、行业、商品、货币、inverse(做空某项)</p><h2 id="稳定币的稳定怎么定义"><a href="#稳定币的稳定怎么定义" class="headerlink" title="稳定币的稳定怎么定义"></a>稳定币的稳定怎么定义</h2><p>稳定是一种相对稳定</p><p>指标：</p><p>波动性 回报标准差 一段时间的最大下跌率</p><p>法定货币也会有6~12%的波动性</p><h3 id="稳定币种分类"><a href="#稳定币种分类" class="headerlink" title="稳定币种分类"></a>稳定币种分类</h3><p>USDC USDT：reserve-based 发一个币就存进一美金</p><p>DAI：collateral-based  抵押稳定币，一般是超额抵押</p><p>algotithmic纯算法币</p><p>稳定币的稳定只是和别的稳定币相比</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> stablecoin defi </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/2023/02/27/Avatar/"/>
+      <url>/2023/02/27/Avatar/</url>
+      
+        <content type="html"><![CDATA[<p># Avatar</p><p>## 案件描述</p><p>Avatar项目于2023年2月8日部署至polygon链,以超高收益率（单利静态最高收益超过30%月化每天）吸引大量用户入场且主要用户为中国大陆用户。至2023年2月26日预估入金接近14亿人民币，项目方收益超过2763万人民币。其代码逻辑与传销如出一辙，以上线拉下线进场为主要收益手段，散户进场风险极高，操盘手已经收割了1级魔盒12次，2级魔盒1次，造成散户巨额经济损失，对社会危害极大。</p><p>## 合约介绍</p><p>+ ReentrancyGuard.sol合约类似于保证串行化交易，一定程度上防止重入攻击和保证call函数的安全<br>+ Avatar.sol合约为业务的主要合约，极其重要的函数分别有OpenPosition 和 ClosePosition两种<br>+ Bucket.sol合约主要是用来生成随机天数的</p><p>## 项目用途</p><p>+ 本项目为用户提供了两种盈利方式，第一种通过购买盒子，也就是Position来获取定期收益，称为静态收益,第二种通过类似于发展下级来获取动态收益。</p><p>## 静态收益</p><p>用户可以选择1到6种不同的盒子来购买，每种不同的盒子需要锁定不同的天数才能开启，每种盒子每一轮单独成池，日收益率初始为1%，范围在0.3%-1.5%</p><p>魔盒I——24小时满，可随时提取种子和回报</p><p>魔盒II ——3-8日为一个周期（随机生成日期）</p><p>魔盒III ——9-16日为一个周期</p><p>磨合IV ——17-31日为一个周期</p><p>魔盒V ——32-91日为一个周期</p><p>魔盒VI ——92-181日为一个周期。</p><p>每个盒子的收益与Avatar合约里FundTarget中Amount和targetAmount相关，当预期的募集资金超过了现有的资金总量，会降低获得的收益率（每超过targetAmount20%降低0.05%，保底收益0.3%）。不仅如此,每个盒子的收益率还与userGrobalInfo里面的boostCredit（止损时获得）相挂钩，可以使用boostCredit提高0.5%收益率。</p><p>&gt; 注意:用户在投资静态收益的时候，所投资的金额有5种取出:①、保本资金(65%),②、平台抽成(2%)、③、激励池(幸运儿池)(1%)、④、静态收益池(26%)、⑤、动态收益池(发展下级)(6%)</p><p>当且仅当静态收益池为空的时候，开启下一个纪元</p><p>## 动态收益</p><p>用户可以发展下级来获取动态收益，动态收益的获取主要为两个方面:官方称为:精灵奖和部落奖。分别占据购买盒子的金额的百分之1.2和百分之4.8，动态收益单独收取。</p><p>### 精灵奖</p><p>用户所处的社区等级决定了他能让多少个上级获利,根据Avatar.sol合约里面的_getLevelToLevelSearchStep函数表明,当社区等级大于等于5时,用户最多能让10个上级分别获得0.12%的收益，当社区等级小于5时,用户的上级在分享了精灵奖后,剩余的资金将返回给用户的referrerAmount(代理收益中)</p><p>### 部落奖</p><p>该游戏强调部落这个概念，该游戏将部落分为12个等级,每个等级有不同的利润抽成,当用户购买了盒子以后,用户的上级会根据当前的部落等级差进行利润抽成,当部落等级差距越大时,代理方会获得更多的收益,当用户的部落奖金还未分配完时,剩余的资金将返回给用户的referrerAmount(代理收益中)</p><p>## 幸运儿奖</p><p>为了鼓励用户的积极参与,在爆仓后,会给予最后参与的60个盒子拥有者分享来自于激励池里面的全部奖金,具体的分配金额与该六十个盒子所投资金额占比有关。</p><p>## 功能描述</p><p>&gt; 具体对项目源码的解读全部在合约里面有注释，主要介绍给用户提供的两种重要方法</p><p>### OpenPosition</p><p>+ 首先判断所购买的箱子类型是否合法,并且判断所投资的金额是否合理，以及参加的轮数是否合理，以及游戏是否开启<br>+ 计算当前投资收益率<br>+ 根据选择是否增强收益(通过boostCredit)<br>+ 分配6%给上级(动态收益)<br>+ 转给平台2%</p><p>### ClosePosition</p><p>+ 从保本资金池里面取出65%<br>+ 如果静态收益池里面有，则取出所属部分的收益和另外本金，否则尽量满足<br>+ 判断此盒子是否是幸运儿盒,如果是则领取幸运儿奖<br>+ 判断是否亏钱，除开如果存在的幸运儿的奖励,如果亏钱则增加boostCredit<br>+ 转账给用户最终的金额</p><p>## 项目方盈利情况</p><p>+ 首先是每笔交易的平台抽成(2%)</p><p>项目方地址：0x9cA75D0d97f0b86dEa852Eb0a626F7839673d9D9（platformaddress）</p><p>因为该地址没有转出记录，所以可以估算项目方入金将近14亿人民币，收益超过2763万人民币。</p><p><img src="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230227004720075.png" class="lazyload" data-srcset="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230227004720075.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20230227004720075"></p><p><img src="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230227004747781.png" class="lazyload" data-srcset="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230227004747781.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20230227004747781"></p><p>+ 但是根据功能分析后显示,最初的referrer的创建必须要有admin权限(batchSetReferrerInfo函数),由项目方admin创建。而根据实际调研来看，项目方将这些初始化地址的部落等级设置成10级甚至是12级，如果这些地址是项目方成员拥有，则不仅可以获得巨额拉下线收益，也可以进行操盘获益。</p><p><img src="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230227005308113.png" class="lazyload" data-srcset="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230227005308113.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20230227005308113"><br>## 代码缺点</p><p>+ UserRoundInfo里面的returnRateBoostedAmount似乎没有在Avatar和bucket中用到</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>对avatar合约的分析</title>
+      <link href="/2023/02/25/%E5%AF%B9avatar%E5%90%88%E7%BA%A6%E7%9A%84%E5%88%86%E6%9E%90/"/>
+      <url>/2023/02/25/%E5%AF%B9avatar%E5%90%88%E7%BA%A6%E7%9A%84%E5%88%86%E6%9E%90/</url>
+      
+        <content type="html"><![CDATA[<p>dapp地址：<a href="https://dgfavatar.com/">https://dgfavatar.com/</a></p><p>avatar合约地址：<a href="https://polygonscan.com/address/0xc7728354f9fe0e43514b1227162d5b0e40fad410#code">https://polygonscan.com/address/0xc7728354f9fe0e43514b1227162d5b0e40fad410#code</a></p><p>共三个合约：ReentrancyGuard.sol、Avatar.sol、Bucket.sol</p><p>ReentrancyGuard.sol：</p><p><img src="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230225235728050.png" class="lazyload" data-srcset="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230225235728050.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20230225235728050"></p><p>此合约为重入攻击防范</p><p>Bucket.sol：</p><p><img src="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230225235826201.png" class="lazyload" data-srcset="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230225235826201.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20230225235826201"></p><p>盲盒合约 获得一个随机盲盒</p><p>Avatar.sol（重点研究）</p><p>  struct UserGlobalInfo {//用户信息</p><p>​    // referrer chain to record the referrer relationship</p><p>​    address referrer;</p><p>​    // referrer rearward vault</p><p>​    uint256 totalReferrerReward;</p><p>​    uint256 referrerRewardClaimed;</p><p>​    // boost credit</p><p>​    uint256 boostCredit;</p><p>​    // sales record</p><p>​    uint256 maxChildrenSales;</p><p>​    uint256 sales;</p><p>​    uint256 totalPositionAmount;</p><p>​    uint256 reportedSales;</p><p>​    uint8 salesLevel;</p><p>  }</p><p>  struct RoundInfo {</p><p>​    FundTarget fundTarget;</p><p>​    uint256 totalPositionAmount; // total amount of all positions</p><p>​    uint256 currentPrincipalAmount; // current principal amount</p><p>​    uint256 currentInvestAmount; // current invest amount</p><p>​    uint256 totalPositionCount; // total count of all positions</p><p>​    uint256 currentPositionCount; // total count of all open positions</p><p>​    uint256 currentIncentiveAmount; // current incentive amount</p><p>​    uint256 incentiveSnapshot; // check total position of last N positions</p><p>​    uint256 head; // head of linked position for last N positions</p><p>​    mapping(uint256 =&gt; LinkedPosition) linkedPositions; // used for incentive track</p><p>​    mapping(address =&gt; uint256) ledgerRoundToUserRoundIndex; // this round index in userRoundsInfos</p><p>​    bool stopLoss; // default false means the round is running</p><p>  }</p><p>ledgertype：魔盒1-6</p><p>position:魔盒</p><p>epoch:轮数</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> blockchain security </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>从0到1完成一个简单的dapp</title>
       <link href="/2023/02/23/%E4%BB%8E0%E5%88%B01%E5%AE%8C%E6%88%90%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84dapp/"/>
       <url>/2023/02/23/%E4%BB%8E0%E5%88%B01%E5%AE%8C%E6%88%90%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84dapp/</url>
@@ -77,7 +128,7 @@
       <link href="/2021/08/08/test/"/>
       <url>/2021/08/08/test/</url>
       
-        <content type="html"><![CDATA[<p>今夜月色很美</p>]]></content>
+        <content type="html"><![CDATA[<p>今夜月色很美</p><p>XRQSVA3VZWD5SXG2</p>]]></content>
       
       
       <categories>
