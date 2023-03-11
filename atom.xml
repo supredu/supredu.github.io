@@ -6,7 +6,7 @@
   <link href="http://supredu.github.io/atom.xml" rel="self"/>
   
   <link href="http://supredu.github.io/"/>
-  <updated>2023-03-11T09:46:19.451Z</updated>
+  <updated>2023-03-11T10:02:19.474Z</updated>
   <id>http://supredu.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://supredu.github.io/2023/03/11/Rollup%E5%AD%A6%E4%B9%A0/"/>
     <id>http://supredu.github.io/2023/03/11/Rollup%E5%AD%A6%E4%B9%A0/</id>
     <published>2023-03-11T08:45:29.000Z</published>
-    <updated>2023-03-11T09:46:19.451Z</updated>
+    <updated>2023-03-11T10:02:19.474Z</updated>
     
     <content type="html"><![CDATA[<h2 id="什么是Rollup"><a href="#什么是Rollup" class="headerlink" title="什么是Rollup?"></a>什么是Rollup?</h2><p>在以太坊主链布置一个DeFi合约需要$25以上的gas费，这无疑是高昂的。所以像rollup这种layer2网络出现了，rollup的主要原理就是将大量的交易在一个快速的区块链网络上进行处理，再以将交易结果打包传回主网或layer1,传回主网产生的费用均摊，这样成本就降下来了。并且rollup网络的安全性更好。</p><h2 id="两种主要的rollup网络"><a href="#两种主要的rollup网络" class="headerlink" title="两种主要的rollup网络"></a>两种主要的rollup网络</h2><h3 id="optimistic-rollups"><a href="#optimistic-rollups" class="headerlink" title="optimistic rollups"></a>optimistic rollups</h3><p>optimistic，乐观的，叫这个名字是因为它假设一个rollup中的交易都是被验证过的。这样做的好处是optimistic rollup网络的速度特别快，因为它省略了confirm的时间。缺点是它大约需要从交易发起一周时间才能从网络中提取资金，因为需要审查是否有欺诈性交易。</p><h3 id="ZK-rollups"><a href="#ZK-rollups" class="headerlink" title="ZK-rollups"></a>ZK-rollups</h3><p>零知识证明rollup，通过利用零知识证明技术，可以使用交易中的极少信息便验证交易是否通过。这种方式保护了隐私，流畅、快速并便宜。相比optimistic rollup，ZK-rollup几乎不用忍受资金延迟提取，它更快更安全，但它的实现更复杂。至今它只能专用于某些服务如交换NFT或者转账crypto，但是最近有了新突破–zkEVM，它是一个类似optimistic rollup的通用网络。</p><h2 id="rollup的风险"><a href="#rollup的风险" class="headerlink" title="rollup的风险"></a>rollup的风险</h2><p>rollup网络中的合约可能存在风险，因为它缺少以太坊一样的故障保护和安全审计。rollup网络还处于初期，开发团队权限偏高，在一些案例中他们可以随时暂停或者关掉网络。很多rollup网络仍然依赖于一个中心化的”定序者”去给L2网络上的交易排序，”定序者”不能欺骗或者替代交易，但是他们可以从给交易重新定序中获益。</p><h2 id="如何使用rollup网络"><a href="#如何使用rollup网络" class="headerlink" title="如何使用rollup网络"></a>如何使用rollup网络</h2><p>首先通过跨链桥将主网资金转移到rollup网络（需要支付一笔主网gas费），然后在l2网络进行你所有的交易，所有交易完成后再使用跨链桥将rollup网络中的资金提回主网。L2网络如optimisim会收取交易手续费，但那远远低于主网的gas费，有些L2如Loopring几乎不收取手续费。</p>]]></content>
     
@@ -36,7 +36,9 @@
     <category term="blockchain" scheme="http://supredu.github.io/categories/blockchain/"/>
     
     
-    <category term="blockchain layer2" scheme="http://supredu.github.io/tags/blockchain-layer2/"/>
+    <category term="blockchain" scheme="http://supredu.github.io/tags/blockchain/"/>
+    
+    <category term="layer2" scheme="http://supredu.github.io/tags/layer2/"/>
     
   </entry>
   
@@ -74,7 +76,7 @@
     <link href="http://supredu.github.io/2023/02/25/%E5%AF%B9avatar%E5%90%88%E7%BA%A6%E7%9A%84%E5%88%86%E6%9E%90/"/>
     <id>http://supredu.github.io/2023/02/25/%E5%AF%B9avatar%E5%90%88%E7%BA%A6%E7%9A%84%E5%88%86%E6%9E%90/</id>
     <published>2023-02-25T15:53:56.000Z</published>
-    <updated>2023-03-11T09:46:35.857Z</updated>
+    <updated>2023-03-11T10:01:59.346Z</updated>
     
     <content type="html"><![CDATA[<p>dapp地址：<a href="https://dgfavatar.com/">https://dgfavatar.com/</a></p><p>avatar合约地址：<a href="https://polygonscan.com/address/0xc7728354f9fe0e43514b1227162d5b0e40fad410#code">https://polygonscan.com/address/0xc7728354f9fe0e43514b1227162d5b0e40fad410#code</a></p><p>共三个合约：ReentrancyGuard.sol、Avatar.sol、Bucket.sol</p><p>ReentrancyGuard.sol：</p><p><img src="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230225235728050.png" class="lazyload" data-srcset="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230225235728050.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20230225235728050"></p><p>此合约为重入攻击防范</p><p>Bucket.sol：</p><p><img src="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230225235826201.png" class="lazyload" data-srcset="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230225235826201.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20230225235826201"></p><p>盲盒合约 获得一个随机盲盒</p><p>Avatar.sol（重点研究）</p><p>  struct UserGlobalInfo {//用户信息</p><p>​    // referrer chain to record the referrer relationship</p><p>​    address referrer;</p><p>​    // referrer rearward vault</p><p>​    uint256 totalReferrerReward;</p><p>​    uint256 referrerRewardClaimed;</p><p>​    // boost credit</p><p>​    uint256 boostCredit;</p><p>​    // sales record</p><p>​    uint256 maxChildrenSales;</p><p>​    uint256 sales;</p><p>​    uint256 totalPositionAmount;</p><p>​    uint256 reportedSales;</p><p>​    uint8 salesLevel;</p><p>  }</p><p>  struct RoundInfo {</p><p>​    FundTarget fundTarget;</p><p>​    uint256 totalPositionAmount; // total amount of all positions</p><p>​    uint256 currentPrincipalAmount; // current principal amount</p><p>​    uint256 currentInvestAmount; // current invest amount</p><p>​    uint256 totalPositionCount; // total count of all positions</p><p>​    uint256 currentPositionCount; // total count of all open positions</p><p>​    uint256 currentIncentiveAmount; // current incentive amount</p><p>​    uint256 incentiveSnapshot; // check total position of last N positions</p><p>​    uint256 head; // head of linked position for last N positions</p><p>​    mapping(uint256 =&gt; LinkedPosition) linkedPositions; // used for incentive track</p><p>​    mapping(address =&gt; uint256) ledgerRoundToUserRoundIndex; // this round index in userRoundsInfos</p><p>​    bool stopLoss; // default false means the round is running</p><p>  }</p><p>ledgertype：魔盒1-6</p><p>position:魔盒</p><p>epoch:轮数</p>]]></content>
     
@@ -90,7 +92,9 @@
     <category term="blockchain-security" scheme="http://supredu.github.io/categories/blockchain-security/"/>
     
     
-    <category term="blockchain security" scheme="http://supredu.github.io/tags/blockchain-security/"/>
+    <category term="blockchain" scheme="http://supredu.github.io/tags/blockchain/"/>
+    
+    <category term="security" scheme="http://supredu.github.io/tags/security/"/>
     
   </entry>
   
