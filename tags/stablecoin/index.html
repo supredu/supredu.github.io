@@ -24,7 +24,7 @@
 
   <!-- 页面元数据 -->
   
-  <title>归档：2021 - supredu的博客</title>
+  <title>标签：stablecoin - supredu的博客</title>
   
 
   
@@ -125,7 +125,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header auto shadow blur " style='opacity: 0' >
+<header id="l_header" class="l_header auto shadow blur show" style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -396,7 +396,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="l_cover">
   
     
-        <div id="half" class='cover-wrapper  dock' style="display: ;">
+        <div id="full" class='cover-wrapper  dock' style="display: none;">
           
             <div id='cover-backstretch'></div>
           
@@ -457,17 +457,17 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper" id="pjax-container">
           
 
+
 <div class='l_main'>
-	
-		
+  
+    
+      
   <section class="post-list">
     
       
         
           
         
-          
-        
       
     
     
@@ -481,17 +481,22 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title" >
-      <a href="../../2021/08/08/test/">
-        test
+      <a href="../../2023/03/01/stablecoin-%E5%AD%A6%E4%B9%A0/">
+        stablecoin 学习1
       </a>
     </h2>
   
   <div class='md'>
     
       
-        今夜月色很美
-XRQSVA3VZWD5SXG2
-
+        经济模型1代表了一个经济进程
+2含有多种变量
+3变量之间有逻辑上或者数量上的关系
+CeFi and DeFi利率：DeFi&gt;CeFi
+DeFi经济模型的变量包括加密货币的价格、平台抵押率、DeFi的协议费、gas费、使用者的数量、链的tps
+外源性变量与内源性变量外源性变量：模型外部决定，并对模型产生影响
+e.g.:在MakerDAO中，抵押物的资产价格是独立于MakerDAO系统的
+...
       
     
   </div>
@@ -502,62 +507,15 @@ XRQSVA3VZWD5SXG2
           
           <a class='avatar' href='/'><img src='/images/author.jpeg'></a>
         
-        <time>2021-08-08</time>
+        <time>2023-03-01</time>
         
           <span class="dot"></span>
-          <a class="category-link" href="../../categories/test/">test</a>
+          <a class="category-link" href="../../categories/DeFi/">DeFi</a>
         
       </div>
       
         <div>
-          <a class='readmore' href='../../2021/08/08/test/'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="../../2021/08/05/hello-world/">
-        Hello World
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Qu...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img src='/images/author.jpeg'></a>
-        
-        <time>2021-08-05</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='../../2021/08/05/hello-world/'>
+          <a class='readmore' href='../../2023/03/01/stablecoin-%E5%AD%A6%E4%B9%A0/'>
             阅读全文
           </a>
         </div>
@@ -577,7 +535,8 @@ Qu...
   
 
 
-	
+    
+  
 </div>
 <aside class='l_side'>
   
@@ -705,7 +664,7 @@ Qu...
 
 
     <div class='content'>
-      <a href="../../tags/DeFi/" style="font-size: 14px; color: #999">DeFi</a> <a href="../../tags/blockchain/" style="font-size: 24px; color: #555">blockchain</a> <a href="../../tags/blockchain-layer2/" style="font-size: 14px; color: #999">blockchain layer2</a> <a href="../../tags/blockchain-security/" style="font-size: 14px; color: #999">blockchain security</a> <a href="../../tags/dapp/" style="font-size: 14px; color: #999">dapp</a> <a href="../../tags/stablecoin/" style="font-size: 14px; color: #999">stablecoin</a>
+      <a href="../DeFi/" style="font-size: 14px; color: #999">DeFi</a> <a href="../blockchain/" style="font-size: 24px; color: #555">blockchain</a> <a href="../blockchain-layer2/" style="font-size: 14px; color: #999">blockchain layer2</a> <a href="../blockchain-security/" style="font-size: 14px; color: #999">blockchain security</a> <a href="../dapp/" style="font-size: 14px; color: #999">dapp</a> <a href="" style="font-size: 14px; color: #999">stablecoin</a>
     </div>
   </section>
 
@@ -729,14 +688,14 @@ Qu...
   // header 这里无论是否开启pjax都需要
   var l_header=document.getElementById("l_header");
   
-  l_header.classList.remove("show");
+  l_header.classList.add("show");
   
   
     // cover
     var cover_wrapper=document.querySelector('.cover-wrapper');
     
-    cover_wrapper.id="half";
-    cover_wrapper.style.display="";
+    cover_wrapper.id="none";
+    cover_wrapper.style.display="none";
     
   
 </script>
