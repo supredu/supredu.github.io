@@ -22,7 +22,9 @@
 
   <!-- 页面元数据 -->
   
-  <title>supredu的博客</title>
+  <title>Rollup学习 - supredu的博客</title>
+  
+    <meta name="keywords" content="blockchain layer2">
   
 
   
@@ -465,52 +467,65 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
     
+      <h1 class="title">
+        Rollup学习
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="/images/author.jpeg">
+    <p>supredu</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt TURQUOISE fa-fw" aria-hidden="true"></i>
+    <p>发布于：2023年3月11日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="Rollup学习" data-path="">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
+        
+      </div>
+    
   </div>
 
 
   
   
-  <p># Avatar</p>
-<p>## 案件描述</p>
-<p>Avatar项目于2023年2月8日部署至polygon链,以超高收益率（单利静态最高收益超过30%月化每天）吸引大量用户入场且主要用户为中国大陆用户。至2023年2月26日预估入金接近14亿人民币，项目方收益超过2763万人民币。其代码逻辑与传销如出一辙，以上线拉下线进场为主要收益手段，散户进场风险极高，操盘手已经收割了1级魔盒12次，2级魔盒1次，造成散户巨额经济损失，对社会危害极大。</p>
-<p>## 合约介绍</p>
-<p>+ ReentrancyGuard.sol合约类似于保证串行化交易，一定程度上防止重入攻击和保证call函数的安全<br>+ Avatar.sol合约为业务的主要合约，极其重要的函数分别有OpenPosition 和 ClosePosition两种<br>+ Bucket.sol合约主要是用来生成随机天数的</p>
-<p>## 项目用途</p>
-<p>+ 本项目为用户提供了两种盈利方式，第一种通过购买盒子，也就是Position来获取定期收益，称为静态收益,第二种通过类似于发展下级来获取动态收益。</p>
-<p>## 静态收益</p>
-<p>用户可以选择1到6种不同的盒子来购买，每种不同的盒子需要锁定不同的天数才能开启，每种盒子每一轮单独成池，日收益率初始为1%，范围在0.3%-1.5%</p>
-<p>魔盒I——24小时满，可随时提取种子和回报</p>
-<p>魔盒II ——3-8日为一个周期（随机生成日期）</p>
-<p>魔盒III ——9-16日为一个周期</p>
-<p>磨合IV ——17-31日为一个周期</p>
-<p>魔盒V ——32-91日为一个周期</p>
-<p>魔盒VI ——92-181日为一个周期。</p>
-<p>每个盒子的收益与Avatar合约里FundTarget中Amount和targetAmount相关，当预期的募集资金超过了现有的资金总量，会降低获得的收益率（每超过targetAmount20%降低0.05%，保底收益0.3%）。不仅如此,每个盒子的收益率还与userGrobalInfo里面的boostCredit（止损时获得）相挂钩，可以使用boostCredit提高0.5%收益率。</p>
-<p>&gt; 注意:用户在投资静态收益的时候，所投资的金额有5种取出:①、保本资金(65%),②、平台抽成(2%)、③、激励池(幸运儿池)(1%)、④、静态收益池(26%)、⑤、动态收益池(发展下级)(6%)</p>
-<p>当且仅当静态收益池为空的时候，开启下一个纪元</p>
-<p>## 动态收益</p>
-<p>用户可以发展下级来获取动态收益，动态收益的获取主要为两个方面:官方称为:精灵奖和部落奖。分别占据购买盒子的金额的百分之1.2和百分之4.8，动态收益单独收取。</p>
-<p>### 精灵奖</p>
-<p>用户所处的社区等级决定了他能让多少个上级获利,根据Avatar.sol合约里面的_getLevelToLevelSearchStep函数表明,当社区等级大于等于5时,用户最多能让10个上级分别获得0.12%的收益，当社区等级小于5时,用户的上级在分享了精灵奖后,剩余的资金将返回给用户的referrerAmount(代理收益中)</p>
-<p>### 部落奖</p>
-<p>该游戏强调部落这个概念，该游戏将部落分为12个等级,每个等级有不同的利润抽成,当用户购买了盒子以后,用户的上级会根据当前的部落等级差进行利润抽成,当部落等级差距越大时,代理方会获得更多的收益,当用户的部落奖金还未分配完时,剩余的资金将返回给用户的referrerAmount(代理收益中)</p>
-<p>## 幸运儿奖</p>
-<p>为了鼓励用户的积极参与,在爆仓后,会给予最后参与的60个盒子拥有者分享来自于激励池里面的全部奖金,具体的分配金额与该六十个盒子所投资金额占比有关。</p>
-<p>## 功能描述</p>
-<p>&gt; 具体对项目源码的解读全部在合约里面有注释，主要介绍给用户提供的两种重要方法</p>
-<p>### OpenPosition</p>
-<p>+ 首先判断所购买的箱子类型是否合法,并且判断所投资的金额是否合理，以及参加的轮数是否合理，以及游戏是否开启<br>+ 计算当前投资收益率<br>+ 根据选择是否增强收益(通过boostCredit)<br>+ 分配6%给上级(动态收益)<br>+ 转给平台2%</p>
-<p>### ClosePosition</p>
-<p>+ 从保本资金池里面取出65%<br>+ 如果静态收益池里面有，则取出所属部分的收益和另外本金，否则尽量满足<br>+ 判断此盒子是否是幸运儿盒,如果是则领取幸运儿奖<br>+ 判断是否亏钱，除开如果存在的幸运儿的奖励,如果亏钱则增加boostCredit<br>+ 转账给用户最终的金额</p>
-<p>## 项目方盈利情况</p>
-<p>+ 首先是每笔交易的平台抽成(2%)</p>
-<p>项目方地址：0x9cA75D0d97f0b86dEa852Eb0a626F7839673d9D9（platformaddress）</p>
-<p>因为该地址没有转出记录，所以可以估算项目方入金将近14亿人民币，收益超过2763万人民币。</p>
-<p><img src="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230227004720075.png" class="lazyload" data-srcset="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230227004720075.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20230227004720075"></p>
-<p><img src="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230227004747781.png" class="lazyload" data-srcset="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230227004747781.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20230227004747781"></p>
-<p>+ 但是根据功能分析后显示,最初的referrer的创建必须要有admin权限(batchSetReferrerInfo函数),由项目方admin创建。而根据实际调研来看，项目方将这些初始化地址的部落等级设置成10级甚至是12级，如果这些地址是项目方成员拥有，则不仅可以获得巨额拉下线收益，也可以进行操盘获益。</p>
-<p><img src="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230227005308113.png" class="lazyload" data-srcset="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230227005308113.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20230227005308113"><br>## 代码缺点</p>
-<p>+ UserRoundInfo里面的returnRateBoostedAmount似乎没有在Avatar和bucket中用到</p>
+  <h2 id="什么是Rollup"><a href="#什么是Rollup" class="headerlink" title="什么是Rollup?"></a>什么是Rollup?</h2><p>在以太坊主链布置一个DeFi合约需要$25以上的gas费，这无疑是高昂的。所以像rollup这种layer2网络出现了，rollup的主要原理就是将大量的交易在一个快速的区块链网络上进行处理，再以将交易结果打包传回主网或layer1,传回主网产生的费用均摊，这样成本就降下来了。并且rollup网络的安全性更好。</p>
+<h2 id="两种主要的rollup网络"><a href="#两种主要的rollup网络" class="headerlink" title="两种主要的rollup网络"></a>两种主要的rollup网络</h2><h3 id="optimistic-rollups"><a href="#optimistic-rollups" class="headerlink" title="optimistic rollups"></a>optimistic rollups</h3><p>optimistic，乐观的，叫这个名字是因为它假设一个rollup中的交易都是被验证过的。这样做的好处是optimistic rollup网络的速度特别快，因为它省略了confirm的时间。缺点是它大约需要从交易发起一周时间才能从网络中提取资金，因为需要审查是否有欺诈性交易。</p>
+<h3 id="ZK-rollups"><a href="#ZK-rollups" class="headerlink" title="ZK-rollups"></a>ZK-rollups</h3><p>零知识证明rollup，通过利用零知识证明技术，可以使用交易中的极少信息便验证交易是否通过。这种方式保护了隐私，流畅、快速并便宜。相比optimistic rollup，ZK-rollup几乎不用忍受资金延迟提取，它更快更安全，但它的实现更复杂。至今它只能专用于某些服务如交换NFT或者转账crypto，但是最近有了新突破–zkEVM，它是一个类似optimistic rollup的通用网络。</p>
+<h2 id="rollup的风险"><a href="#rollup的风险" class="headerlink" title="rollup的风险"></a>rollup的风险</h2><p>rollup网络中的合约可能存在风险，因为它缺少以太坊一样的故障保护和安全审计。rollup网络还处于初期，开发团队权限偏高，在一些案例中他们可以随时暂停或者关掉网络。很多rollup网络仍然依赖于一个中心化的”定序者”去给L2网络上的交易排序，”定序者”不能欺骗或者替代交易，但是他们可以从给交易重新定序中获益。</p>
+<h2 id="如何使用rollup网络"><a href="#如何使用rollup网络" class="headerlink" title="如何使用rollup网络"></a>如何使用rollup网络</h2><p>首先通过跨链桥将主网资金转移到rollup网络（需要支付一笔主网gas费），然后在l2网络进行你所有的交易，所有交易完成后再使用跨链桥将rollup网络中的资金提回主网。L2网络如optimisim会收取交易手续费，但那远远低于主网的gas费，有些L2如Loopring几乎不收取手续费。</p>
 
   
   
@@ -528,7 +543,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               
-                <p>本文永久链接是：<a href=http://supredu.github.io/2023/02/27/Avatar/>http://supredu.github.io/2023/02/27/Avatar/</a></p>
+                <p>本文永久链接是：<a href=http://supredu.github.io/2023/03/11/Rollup%E5%AD%A6%E4%B9%A0/>http://supredu.github.io/2023/03/11/Rollup%E5%AD%A6%E4%B9%A0/</a></p>
               
             
           </blockquote>
@@ -545,10 +560,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2023-02-27T01:09:16+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2023-03-11T17:40:14+08:00">
   <a class='notlink'>
     <i class="fas fa-edit GREENSEA fa-fw" aria-hidden="true"></i>
-    <p>更新于：2023年2月27日</p>
+    <p>更新于：2023年3月11日</p>
   </a>
 </div>
 
@@ -556,6 +571,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="../../../../tags/blockchain-layer2/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>blockchain layer2</p></a></div>
+
 
         
       
@@ -567,7 +585,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://supredu.github.io/2023/02/27/Avatar/&title= - supredu的博客&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://supredu.github.io/2023/03/11/Rollup%E5%AD%A6%E4%B9%A0/&title=Rollup学习 - supredu的博客&summary="
           
           >
           
@@ -579,7 +597,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://supredu.github.io/2023/02/27/Avatar/&title= - supredu的博客&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://supredu.github.io/2023/03/11/Rollup%E5%AD%A6%E4%B9%A0/&title=Rollup学习 - supredu的博客&summary="
           
           >
           
@@ -591,7 +609,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://supredu.github.io/2023/02/27/Avatar/&title= - supredu的博客&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://supredu.github.io/2023/03/11/Rollup%E5%AD%A6%E4%B9%A0/&title=Rollup学习 - supredu的博客&summary="
           
           >
           
@@ -621,20 +639,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='../../../03/01/stablecoin-%E5%AD%A6%E4%B9%A0/'>
-          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>stablecoin 学习1</p>
+      
+        <a class='next' href='../../01/stablecoin-%E5%AD%A6%E4%B9%A0/'>
+          <p class='title'>stablecoin 学习1<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>经济模型1代表了一个经济进程
 2含有多种变量
 3变量之间有逻辑上或者数量上的关系
 CeFi and DeFi利率：DeFi&gt;CeFi
 DeFi经济模型的变量包括加密货币的价格、平台抵押率、...</p>
-        </a>
-      
-      
-        <a class='next' href='../../25/%E5%AF%B9avatar%E5%90%88%E7%BA%A6%E7%9A%84%E5%88%86%E6%9E%90/'>
-          <p class='title'>对avatar合约的分析<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>dapp地址：https://dgfavatar.com/
-avatar合约地址：https://polygonscan.com/address/0xc7728354f9fe0e43514b12...</p>
         </a>
       
     </div>
@@ -667,6 +679,20 @@ avatar合约地址：https://polygonscan.com/address/0xc7728354f9fe0e43514b12...
 
 
 
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFRollup"><span class="toc-number">1.</span> <span class="toc-text">什么是Rollup?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%A4%E7%A7%8D%E4%B8%BB%E8%A6%81%E7%9A%84rollup%E7%BD%91%E7%BB%9C"><span class="toc-number">2.</span> <span class="toc-text">两种主要的rollup网络</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#optimistic-rollups"><span class="toc-number">2.1.</span> <span class="toc-text">optimistic rollups</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ZK-rollups"><span class="toc-number">2.2.</span> <span class="toc-text">ZK-rollups</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#rollup%E7%9A%84%E9%A3%8E%E9%99%A9"><span class="toc-number">3.</span> <span class="toc-text">rollup的风险</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8rollup%E7%BD%91%E7%BB%9C"><span class="toc-number">4.</span> <span class="toc-text">如何使用rollup网络</span></a></li></ol>
+    </div>
+  </section>
+
 
   
 
@@ -681,8 +707,8 @@ avatar合约地址：https://polygonscan.com/address/0xc7728354f9fe0e43514b12...
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="Rollup学习";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   // header 这里无论是否开启pjax都需要
