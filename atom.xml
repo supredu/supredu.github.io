@@ -6,7 +6,7 @@
   <link href="http://supredu.github.io/atom.xml" rel="self"/>
   
   <link href="http://supredu.github.io/"/>
-  <updated>2023-03-12T07:50:29.915Z</updated>
+  <updated>2023-03-12T12:11:25.935Z</updated>
   <id>http://supredu.github.io/</id>
   
   <author>
@@ -17,13 +17,42 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>跨链桥学习</title>
+    <link href="http://supredu.github.io/2023/03/12/%E8%B7%A8%E9%93%BE%E6%A1%A5%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://supredu.github.io/2023/03/12/%E8%B7%A8%E9%93%BE%E6%A1%A5%E5%AD%A6%E4%B9%A0/</id>
+    <published>2023-03-12T07:51:27.000Z</published>
+    <updated>2023-03-12T12:11:25.935Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="什么是跨链桥"><a href="#什么是跨链桥" class="headerlink" title="什么是跨链桥"></a>什么是跨链桥</h2><p>跨链桥是一种解决多链之间可操作性低的工具，它允许你将资产从一条链转移到另一条链。</p><h2 id="跨链桥的类型"><a href="#跨链桥的类型" class="headerlink" title="跨链桥的类型"></a>跨链桥的类型</h2><h3 id="单向桥"><a href="#单向桥" class="headerlink" title="单向桥"></a>单向桥</h3><p>允许你将资产转移到固定的链</p><p>e.g. WBTC(Wrapped Bitcoin)允许你将BTC发送到以太坊上，但是它不允许你将ether（以太币）发到比特币网络中。</p><h3 id="双向桥"><a href="#双向桥" class="headerlink" title="双向桥"></a>双向桥</h3><p>允许资产在两条链之间交互</p><p>e.g. 可以将SOL发送到以太坊网络中，也可以将ether发送到solana上</p><h3 id="中心化-代保管的桥"><a href="#中心化-代保管的桥" class="headerlink" title="中心化/代保管的桥"></a>中心化/代保管的桥</h3><p>由项目方控制跨链资产。</p><p>e.g. 用来兑换WBTC的BTC全部由BitGO公司保管</p><h3 id="去中心化-无代管的桥"><a href="#去中心化-无代管的桥" class="headerlink" title="去中心化/无代管的桥"></a>去中心化/无代管的桥</h3><p>e.g. Wormhole，该项目中所有跨链资产由协议持有（并不意味着去中心化的桥更安全，如Wormhole bridge exploit事件）</p><h2 id="跨链转移方式"><a href="#跨链转移方式" class="headerlink" title="跨链转移方式"></a>跨链转移方式</h2><p>区块链在转移跨链资产时通常分为以下四种方式：第一种是锁定和铸造，该方式会在原链上锁定资产，并在目标链上铸造对应的资产；第二种方式是销毁和铸造，该方式会销毁原链上的资产，并在目标链上铸造资产；第三种方式是原子交换，该方式会将原链上的资产直接兑换为目标链上的资产，且无需信任，因此其不需要前两种方式中的可信第三方；第四种方式为流动性置换，该方式会在不同的链上建立流动性资金池，用户可以在资金池中直接兑换另一条链上的原生资产，另外流动性提供者也可以通过提供代币作为流动性资金。</p><h2 id="为什么用跨链桥"><a href="#为什么用跨链桥" class="headerlink" title="为什么用跨链桥"></a>为什么用跨链桥</h2><h3 id="降低网络成本"><a href="#降低网络成本" class="headerlink" title="降低网络成本"></a>降低网络成本</h3><p>将资产从以太坊这样高gas费的网络转移到Arbitrum或者Polygon这样的二层网络可以降低交易费用。</p><h3 id="用户赚取收益"><a href="#用户赚取收益" class="headerlink" title="用户赚取收益"></a>用户赚取收益</h3><p>用户可以将不同链的资产集中起来选择某DeFi协议投资或者赚取差价等，大大提高了资产的灵活性和利用率。</p><h3 id="平台方扩大运营范围"><a href="#平台方扩大运营范围" class="headerlink" title="平台方扩大运营范围"></a>平台方扩大运营范围</h3><p>一条链上的DeFi项目方可以通过跨链桥在另一条链上上限一个Wrapped版本。并且随着跨链桥技术的进步，DeFi项目方将跨链桥融入项目，让用户可以在该DeFi协议中完成与其他协议的交互</p><h2 id="目前最大的跨链桥"><a href="#目前最大的跨链桥" class="headerlink" title="目前最大的跨链桥"></a>目前最大的跨链桥</h2><p>截止2022年3月有价值218亿美元的加密货币资产锁在跨链桥中，最大的跨链桥是WBTC，锁定总资产达102亿美元，其次是Avalanche Bridge（以太坊上最大的跨链桥），Polygon Bridge和 Fantom Anyswap Bridge</p><h2 id="跨链桥安全吗"><a href="#跨链桥安全吗" class="headerlink" title="跨链桥安全吗"></a>跨链桥安全吗</h2><p>跨链桥存在风险。许多新上的去中心化跨链桥没有经过测试且容易被黑客攻破。不同于去中心化跨链桥面临的风险绝大多数来自于攻击者，中心化的跨链桥则面临跨链桥公司腐败或疏忽于资产管理，又或是失去质押资产的管理权，比如被当地监管部门要求冻结资产。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;什么是跨链桥&quot;&gt;&lt;a href=&quot;#什么是跨链桥&quot; class=&quot;headerlink&quot; title=&quot;什么是跨链桥&quot;&gt;&lt;/a&gt;什么是跨链桥&lt;/h2&gt;&lt;p&gt;跨链桥是一种解决多链之间可操作性低的工具，它允许你将资产从一条链转移到另一条链。&lt;/p&gt;
+&lt;h2 id=&quot;跨</summary>
+      
+    
+    
+    
+    <category term="blockchain" scheme="http://supredu.github.io/categories/blockchain/"/>
+    
+    
+    <category term="blockchain" scheme="http://supredu.github.io/tags/blockchain/"/>
+    
+    <category term="DeFi" scheme="http://supredu.github.io/tags/DeFi/"/>
+    
+    <category term="crosschain-bridge" scheme="http://supredu.github.io/tags/crosschain-bridge/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Rollup学习</title>
     <link href="http://supredu.github.io/2023/03/11/Rollup%E5%AD%A6%E4%B9%A0/"/>
     <id>http://supredu.github.io/2023/03/11/Rollup%E5%AD%A6%E4%B9%A0/</id>
     <published>2023-03-11T08:45:29.000Z</published>
-    <updated>2023-03-12T07:50:29.915Z</updated>
+    <updated>2023-03-12T09:27:38.707Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="什么是Rollup"><a href="#什么是Rollup" class="headerlink" title="什么是Rollup?"></a>什么是Rollup?</h2><p>在以太坊主链布置一个DeFi合约需要$25以上的gas费，这无疑是高昂的。所以像rollup这种layer2网络出现了，rollup的主要原理就是将大量的交易在一个快速的区块链网络上进行处理，再以将交易结果打包传回主网或layer1,传回主网产生的费用均摊，这样成本就降下来了。并且rollup网络的安全性更好。</p><h2 id="与侧链技术的区别"><a href="#与侧链技术的区别" class="headerlink" title="与侧链技术的区别"></a>与侧链技术的区别</h2><p>侧链技术引入一条侧链，利用双向挂钩与智能合约技术实现数字资产验证转移。但侧链技术的资产并没有真正的转移，而是当资产从主网“转移”到侧链上时，锁住主网转移的资产，解锁侧链上的资产达到的转移。其中智能合约发送的信息会经过链下进程处理。</p><p><img src="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230312155003783.png" class="lazyload" data-srcset="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230312155003783.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20230312155003783"></p><h2 id="两种主要的rollup网络"><a href="#两种主要的rollup网络" class="headerlink" title="两种主要的rollup网络"></a>两种主要的rollup网络</h2><h3 id="optimistic-rollups"><a href="#optimistic-rollups" class="headerlink" title="optimistic rollups"></a>optimistic rollups</h3><p>optimistic，乐观的，叫这个名字是因为它假设一个rollup中的交易都是被验证过的。这样做的好处是optimistic rollup网络的速度特别快，因为它省略了confirm的时间。缺点是它大约需要从交易发起一周时间才能从网络中提取资金，因为需要审查是否有欺诈性交易。</p><h3 id="ZK-rollups"><a href="#ZK-rollups" class="headerlink" title="ZK-rollups"></a>ZK-rollups</h3><p>零知识证明rollup，通过利用零知识证明技术，可以使用交易中的极少信息便验证交易是否通过。这种方式保护了隐私，流畅、快速并便宜。相比optimistic rollup，ZK-rollup几乎不用忍受资金延迟提取，它更快更安全，但它的实现更复杂。至今它只能专用于某些服务如交换NFT或者转账crypto，但是最近有了新突破–zkEVM，它是一个类似optimistic rollup的通用网络。</p><h2 id="rollup的风险"><a href="#rollup的风险" class="headerlink" title="rollup的风险"></a>rollup的风险</h2><p>rollup网络中的合约可能存在风险，因为它缺少以太坊一样的故障保护和安全审计。rollup网络还处于初期，开发团队权限偏高，在一些案例中他们可以随时暂停或者关掉网络。很多rollup网络仍然依赖于一个中心化的”定序者”去给L2网络上的交易排序，”定序者”不能欺骗或者替代交易，但是他们可以从给交易重新定序中获益。</p><h2 id="如何使用rollup网络"><a href="#如何使用rollup网络" class="headerlink" title="如何使用rollup网络"></a>如何使用rollup网络</h2><p>首先通过跨链桥将主网资金转移到rollup网络（需要支付一笔主网gas费），然后在l2网络进行你所有的交易，所有交易完成后再使用跨链桥将rollup网络中的资金提回主网。L2网络如optimisim会收取交易手续费，但那远远低于主网的gas费，有些L2如Loopring几乎不收取手续费。</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="什么是Rollup"><a href="#什么是Rollup" class="headerlink" title="什么是Rollup?"></a>什么是Rollup?</h2><p>在以太坊主链布置一个DeFi合约需要$25以上的gas费，这无疑是高昂的。所以像rollup这种layer2网络出现了，rollup的主要原理就是将大量的交易在一个快速的区块链网络上进行处理，再以将交易结果打包传回主网或layer1,传回主网产生的费用均摊，这样成本就降下来了。并且rollup网络的安全性更好。</p><h2 id="与以往侧链技术的区别"><a href="#与以往侧链技术的区别" class="headerlink" title="与以往侧链技术的区别"></a>与以往侧链技术的区别</h2><p>侧链技术引入一条侧链，利用双向锚定与智能合约技术实现数字资产验证转移。但侧链技术的资产并没有真正的转移，而是当资产从主网“转移”到侧链上时，锁住主网转移的资产，解锁侧链上的资产达到的转移。其中智能合约发送的信息会经过链下进程处理。</p><p><img src="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230312155003783.png" class="lazyload" data-srcset="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230312155003783.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20230312155003783"></p><h2 id="两种主要的rollup网络"><a href="#两种主要的rollup网络" class="headerlink" title="两种主要的rollup网络"></a>两种主要的rollup网络</h2><h3 id="optimistic-rollups"><a href="#optimistic-rollups" class="headerlink" title="optimistic rollups"></a>optimistic rollups</h3><p>optimistic，乐观的，叫这个名字是因为它假设一个rollup中的交易都是被验证过的。这样做的好处是optimistic rollup网络的速度特别快，因为它省略了confirm的时间。缺点是它大约需要从交易发起一周时间才能从网络中提取资金，因为需要审查是否有欺诈性交易。</p><h3 id="ZK-rollups"><a href="#ZK-rollups" class="headerlink" title="ZK-rollups"></a>ZK-rollups</h3><p>零知识证明rollup，通过利用零知识证明技术，可以使用交易中的极少信息便验证交易是否通过。这种方式保护了隐私，流畅、快速并便宜。相比optimistic rollup，ZK-rollup几乎不用忍受资金延迟提取，它更快更安全，但它的实现更复杂。至今它只能专用于某些服务如交换NFT或者转账crypto，但是最近有了新突破–zkEVM，它是一个类似optimistic rollup的通用网络。</p><h2 id="rollup的风险"><a href="#rollup的风险" class="headerlink" title="rollup的风险"></a>rollup的风险</h2><p>rollup网络中的合约可能存在风险，因为它缺少以太坊一样的故障保护和安全审计。rollup网络还处于初期，开发团队权限偏高，在一些案例中他们可以随时暂停或者关掉网络。很多rollup网络仍然依赖于一个中心化的”定序者”去给L2网络上的交易排序，”定序者”不能欺骗或者替代交易，但是他们可以从给交易重新定序中获益。</p><h2 id="如何使用rollup网络"><a href="#如何使用rollup网络" class="headerlink" title="如何使用rollup网络"></a>如何使用rollup网络</h2><p>首先通过跨链桥将主网资金转移到rollup网络（需要支付一笔主网gas费），然后在l2网络进行你所有的交易，所有交易完成后再使用跨链桥将rollup网络中的资金提回主网。L2网络如optimisim会收取交易手续费，但那远远低于主网的gas费，有些L2如Loopring几乎不收取手续费。</p>]]></content>
     
     
       

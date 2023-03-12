@@ -529,7 +529,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   
   <h2 id="什么是Rollup"><a href="#什么是Rollup" class="headerlink" title="什么是Rollup?"></a>什么是Rollup?</h2><p>在以太坊主链布置一个DeFi合约需要$25以上的gas费，这无疑是高昂的。所以像rollup这种layer2网络出现了，rollup的主要原理就是将大量的交易在一个快速的区块链网络上进行处理，再以将交易结果打包传回主网或layer1,传回主网产生的费用均摊，这样成本就降下来了。并且rollup网络的安全性更好。</p>
-<h2 id="与侧链技术的区别"><a href="#与侧链技术的区别" class="headerlink" title="与侧链技术的区别"></a>与侧链技术的区别</h2><p>侧链技术引入一条侧链，利用双向挂钩与智能合约技术实现数字资产验证转移。但侧链技术的资产并没有真正的转移，而是当资产从主网“转移”到侧链上时，锁住主网转移的资产，解锁侧链上的资产达到的转移。其中智能合约发送的信息会经过链下进程处理。</p>
+<h2 id="与以往侧链技术的区别"><a href="#与以往侧链技术的区别" class="headerlink" title="与以往侧链技术的区别"></a>与以往侧链技术的区别</h2><p>侧链技术引入一条侧链，利用双向锚定与智能合约技术实现数字资产验证转移。但侧链技术的资产并没有真正的转移，而是当资产从主网“转移”到侧链上时，锁住主网转移的资产，解锁侧链上的资产达到的转移。其中智能合约发送的信息会经过链下进程处理。</p>
 <p><img src="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230312155003783.png" class="lazyload" data-srcset="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230312155003783.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20230312155003783"></p>
 <h2 id="两种主要的rollup网络"><a href="#两种主要的rollup网络" class="headerlink" title="两种主要的rollup网络"></a>两种主要的rollup网络</h2><h3 id="optimistic-rollups"><a href="#optimistic-rollups" class="headerlink" title="optimistic rollups"></a>optimistic rollups</h3><p>optimistic，乐观的，叫这个名字是因为它假设一个rollup中的交易都是被验证过的。这样做的好处是optimistic rollup网络的速度特别快，因为它省略了confirm的时间。缺点是它大约需要从交易发起一周时间才能从网络中提取资金，因为需要审查是否有欺诈性交易。</p>
 <h3 id="ZK-rollups"><a href="#ZK-rollups" class="headerlink" title="ZK-rollups"></a>ZK-rollups</h3><p>零知识证明rollup，通过利用零知识证明技术，可以使用交易中的极少信息便验证交易是否通过。这种方式保护了隐私，流畅、快速并便宜。相比optimistic rollup，ZK-rollup几乎不用忍受资金延迟提取，它更快更安全，但它的实现更复杂。至今它只能专用于某些服务如交换NFT或者转账crypto，但是最近有了新突破–zkEVM，它是一个类似optimistic rollup的通用网络。</p>
@@ -569,7 +569,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2023-03-12T15:50:29+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2023-03-12T17:27:38+08:00">
   <a class='notlink'>
     <i class="fas fa-edit GREENSEA fa-fw" aria-hidden="true"></i>
     <p>更新于：2023年3月12日</p>
@@ -648,6 +648,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
+        <a class='prev' href='../../12/%E8%B7%A8%E9%93%BE%E6%A1%A5%E5%AD%A6%E4%B9%A0/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>跨链桥学习</p>
+          <p class='content'>什么是跨链桥跨链桥是一种解决多链之间可操作性低的工具，它允许你将资产从一条链转移到另一条链。
+跨链桥的类型单向桥允许你将资产转移到固定的链
+e.g. WBTC(Wrapped Bitcoin)允...</p>
+        </a>
+      
       
         <a class='next' href='../../01/stablecoin-%E5%AD%A6%E4%B9%A0/'>
           <p class='title'>stablecoin 学习1<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
@@ -698,7 +705,7 @@ DeFi经济模型的变量包括加密货币的价格、平台抵押率、...</p>
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFRollup"><span class="toc-number">1.</span> <span class="toc-text">什么是Rollup?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8E%E4%BE%A7%E9%93%BE%E6%8A%80%E6%9C%AF%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">2.</span> <span class="toc-text">与侧链技术的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%A4%E7%A7%8D%E4%B8%BB%E8%A6%81%E7%9A%84rollup%E7%BD%91%E7%BB%9C"><span class="toc-number">3.</span> <span class="toc-text">两种主要的rollup网络</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#optimistic-rollups"><span class="toc-number">3.1.</span> <span class="toc-text">optimistic rollups</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ZK-rollups"><span class="toc-number">3.2.</span> <span class="toc-text">ZK-rollups</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#rollup%E7%9A%84%E9%A3%8E%E9%99%A9"><span class="toc-number">4.</span> <span class="toc-text">rollup的风险</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8rollup%E7%BD%91%E7%BB%9C"><span class="toc-number">5.</span> <span class="toc-text">如何使用rollup网络</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFRollup"><span class="toc-number">1.</span> <span class="toc-text">什么是Rollup?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8E%E4%BB%A5%E5%BE%80%E4%BE%A7%E9%93%BE%E6%8A%80%E6%9C%AF%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">2.</span> <span class="toc-text">与以往侧链技术的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%A4%E7%A7%8D%E4%B8%BB%E8%A6%81%E7%9A%84rollup%E7%BD%91%E7%BB%9C"><span class="toc-number">3.</span> <span class="toc-text">两种主要的rollup网络</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#optimistic-rollups"><span class="toc-number">3.1.</span> <span class="toc-text">optimistic rollups</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ZK-rollups"><span class="toc-number">3.2.</span> <span class="toc-text">ZK-rollups</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#rollup%E7%9A%84%E9%A3%8E%E9%99%A9"><span class="toc-number">4.</span> <span class="toc-text">rollup的风险</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8rollup%E7%BD%91%E7%BB%9C"><span class="toc-number">5.</span> <span class="toc-text">如何使用rollup网络</span></a></li></ol>
     </div>
   </section>
 
