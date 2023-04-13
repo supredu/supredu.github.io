@@ -22,9 +22,9 @@
 
   <!-- 页面元数据 -->
   
-  <title>跨链桥学习 - supredu的博客</title>
+  <title>终端代理配置的一些经验 - supredu的博客</title>
   
-    <meta name="keywords" content="blockchain,DeFi,crosschain-bridge">
+    <meta name="keywords" content="终端配置,环境配置">
   
 
   
@@ -468,7 +468,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title">
-        跨链桥学习
+        终端代理配置的一些经验
       </h1>
       <div class='new-meta-box'>
         
@@ -488,7 +488,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class='new-meta-item category'>
     <a class='notlink'>
       <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="../../../../categories/blockchain/">blockchain</a>
+      <a class="category-link" href="../../../../categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">环境配置</a>
     </a>
   </div>
 
@@ -499,7 +499,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt TURQUOISE fa-fw" aria-hidden="true"></i>
-    <p>发布于：2023年3月12日</p>
+    <p>发布于：2023年4月13日</p>
   </a>
 </div>
 
@@ -510,7 +510,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item browse leancloud">
     <a class='notlink'>
       
-      <div id="lc-pv" data-title="跨链桥学习" data-path="">
+      <div id="lc-pv" data-title="终端代理配置的一些经验" data-path="">
         <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
         <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
         次浏览
@@ -528,20 +528,36 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   
   
-  <h2 id="什么是跨链桥"><a href="#什么是跨链桥" class="headerlink" title="什么是跨链桥"></a>什么是跨链桥</h2><p>跨链桥是一种解决多链之间可操作性低的工具，它允许你将资产从一条链转移到另一条链。</p>
-<h2 id="跨链桥的类型"><a href="#跨链桥的类型" class="headerlink" title="跨链桥的类型"></a>跨链桥的类型</h2><h3 id="单向桥"><a href="#单向桥" class="headerlink" title="单向桥"></a>单向桥</h3><p>允许你将资产转移到固定的链</p>
-<p>e.g. WBTC(Wrapped Bitcoin)允许你将BTC发送到以太坊上，但是它不允许你将ether（以太币）发到比特币网络中。</p>
-<h3 id="双向桥"><a href="#双向桥" class="headerlink" title="双向桥"></a>双向桥</h3><p>允许资产在两条链之间交互</p>
-<p>e.g. 可以将SOL发送到以太坊网络中，也可以将ether发送到solana上</p>
-<h3 id="中心化-代保管的桥"><a href="#中心化-代保管的桥" class="headerlink" title="中心化/代保管的桥"></a>中心化/代保管的桥</h3><p>由项目方控制跨链资产。</p>
-<p>e.g. 用来兑换WBTC的BTC全部由BitGO公司保管</p>
-<h3 id="去中心化-无代管的桥"><a href="#去中心化-无代管的桥" class="headerlink" title="去中心化/无代管的桥"></a>去中心化/无代管的桥</h3><p>e.g. Wormhole，该项目中所有跨链资产由协议持有（并不意味着去中心化的桥更安全，如Wormhole bridge exploit事件）</p>
-<h2 id="跨链转移方式"><a href="#跨链转移方式" class="headerlink" title="跨链转移方式"></a>跨链转移方式</h2><p>区块链在转移跨链资产时通常分为以下四种方式：第一种是锁定和铸造，该方式会在原链上锁定资产，并在目标链上铸造对应的资产；第二种方式是销毁和铸造，该方式会销毁原链上的资产，并在目标链上铸造资产；第三种方式是原子交换，该方式会将原链上的资产直接兑换为目标链上的资产，且无需信任，因此其不需要前两种方式中的可信第三方；第四种方式为流动性置换，该方式会在不同的链上建立流动性资金池，用户可以在资金池中直接兑换另一条链上的原生资产，另外流动性提供者也可以通过提供代币作为流动性资金。</p>
-<h2 id="为什么用跨链桥"><a href="#为什么用跨链桥" class="headerlink" title="为什么用跨链桥"></a>为什么用跨链桥</h2><h3 id="降低网络成本"><a href="#降低网络成本" class="headerlink" title="降低网络成本"></a>降低网络成本</h3><p>将资产从以太坊这样高gas费的网络转移到Arbitrum或者Polygon这样的二层网络可以降低交易费用。</p>
-<h3 id="用户赚取收益"><a href="#用户赚取收益" class="headerlink" title="用户赚取收益"></a>用户赚取收益</h3><p>用户可以将不同链的资产集中起来选择某DeFi协议投资或者赚取差价等，大大提高了资产的灵活性和利用率。</p>
-<h3 id="平台方扩大运营范围"><a href="#平台方扩大运营范围" class="headerlink" title="平台方扩大运营范围"></a>平台方扩大运营范围</h3><p>一条链上的DeFi项目方可以通过跨链桥在另一条链上上限一个Wrapped版本。并且随着跨链桥技术的进步，DeFi项目方将跨链桥融入项目，让用户可以在该DeFi协议中完成与其他协议的交互</p>
-<h2 id="目前最大的跨链桥"><a href="#目前最大的跨链桥" class="headerlink" title="目前最大的跨链桥"></a>目前最大的跨链桥</h2><p>截止2022年3月有价值218亿美元的加密货币资产锁在跨链桥中，最大的跨链桥是WBTC，锁定总资产达102亿美元，其次是Avalanche Bridge（以太坊上最大的跨链桥），Polygon Bridge和 Fantom Anyswap Bridge</p>
-<h2 id="跨链桥安全吗"><a href="#跨链桥安全吗" class="headerlink" title="跨链桥安全吗"></a>跨链桥安全吗</h2><p>跨链桥存在风险。许多新上的去中心化跨链桥没有经过测试且容易被黑客攻破。不同于去中心化跨链桥面临的风险绝大多数来自于攻击者，中心化的跨链桥则面临跨链桥公司腐败或疏忽于资产管理，又或是失去质押资产的管理权，比如被当地监管部门要求冻结资产。</p>
+  <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>身为中国开发者，总是会遇到一些不可避免的网络问题，这个时候我们需要使用vpn软件。但是会有一个问题出现，为什么挂着梯子后浏览器可以访问外网，但是终端访问外网是却总是连接超时。今天我们就来研究一下这个问题。</p>
+<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><h3 id="Clash"><a href="#Clash" class="headerlink" title="Clash"></a>Clash</h3><p>Clash是一个用Go语言开发，基于规则的多平台代理客户端，兼容Socks5/Trojan等多种协议，而且拥有像Surge一样强大的自定义代理规则。Clash具有自动测速、自动判断是否需要加速、自动选择高速节点的功能。Clash是一款支持Windows、macOS、Android等多平台的代理软件。</p>
+<h3 id="Vscode"><a href="#Vscode" class="headerlink" title="Vscode"></a>Vscode</h3><p>vscode是一种简化且高效的代码编辑器，同时支持诸如调试，任务执行和版本管理之类的开发操作。它的目标是提供一种快速的编码编译调试工具。然后将其余部分留给IDE。vscode集成了所有一款现代编辑器所应该具备的特性，包括语法高亮、可定制的热键绑定、括号匹配、以及代码片段收集等。</p>
+<h3 id="www-icanhazip-com"><a href="#www-icanhazip-com" class="headerlink" title="www.icanhazip.com"></a><a target="_blank" rel="noopener" href="http://www.icanhazip.com/">www.icanhazip.com</a></h3><p>一个可以返回你ip的网址</p>
+<h3 id="curl命令和ping命令的区别"><a href="#curl命令和ping命令的区别" class="headerlink" title="curl命令和ping命令的区别"></a>curl命令和ping命令的区别</h3><p>ping和curl是不同的协议。ping是ICMP协议，不是tcp/udp socket。而curl是走的tcp/ip协议。服务器或防火墙可以通过拒绝ICMP协议来实现拒绝ping，不能ping通不代表你的socket不能访问，它们是不同的协议。所以测试时我们选择用curl命令。</p>
+<h2 id="正式测试"><a href="#正式测试" class="headerlink" title="正式测试"></a>正式测试</h2><p><img src="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230413141602947.png" class="lazyload" data-srcset="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230413141602947.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20230413141602947"></p>
+<p>挂了一个日本的节点访问Google成功</p>
+<p><img src="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230413141643328.png" class="lazyload" data-srcset="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230413141643328.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20230413141643328"></p>
+<p>我们切换到vscode终端即powershell去curl一下google</p>
+<p><img src="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230413151431473.png" class="lazyload" data-srcset="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230413151431473.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20230413151431473"></p>
+<p><img src="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230413142616783.png" class="lazyload" data-srcset="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230413142616783.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20230413142616783"></p>
+<p>注意，此时clash我们选择的是规则模式。那么如果我们切换为全局模式呢？</p>
+<p><img src="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230413142721959.png" class="lazyload" data-srcset="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230413142721959.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20230413142721959"></p>
+<p>仍然curl不通</p>
+<p><img src="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230413151539082.png" class="lazyload" data-srcset="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230413151539082.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20230413151539082"></p>
+<p>全局模式下依然curl不出来，这说明终端代理需要自行配置，<strong>clash的全局代理和规则代理区别只是：全局代理只是访问任何网站都走选中的节点，规则代理是访问境外网站走选中的节点，访问境内网站选择直连模式。</strong></p>
+<p>此时我们curl准备工作中提到的网站[<a target="_blank" rel="noopener" href="http://www.icanhazip.com/">www.icanhazip.com</a></p>
+<p><img src="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230413150928120.png" class="lazyload" data-srcset="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230413150928120.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20230413150928120"></p>
+<p>搜索ip 183.221.76.133,发现ip还在国内。</p>
+<p><img src="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230413151111841.png" class="lazyload" data-srcset="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230413151111841.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20230413151111841"></p>
+<p>我们在clash中找到端口号，去vscode里配置代理</p>
+<p><img src="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230413143914123.png" class="lazyload" data-srcset="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230413143914123.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20230413143914123"></p>
+<p><img src="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230413143713732.png" class="lazyload" data-srcset="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230413143713732.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20230413143713732"></p>
+<p>再次curl谷歌，OK</p>
+<p><img src="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230413144203021.png" class="lazyload" data-srcset="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230413144203021.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20230413144203021"></p>
+<p>此时curl一下准备工作中提到的网站<a href="www.icanhazip.com">www.icanhazip.com</a></p>
+<p><img src="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230413144248379.png" class="lazyload" data-srcset="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230413144248379.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20230413144248379"></p>
+<p>得到ip 103.178.55.210</p>
+<p>百度查询ip，发现ip已经在日本了</p>
+<p><img src="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230413144320421.png" class="lazyload" data-srcset="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230413144320421.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20230413144320421"></p>
 
   
   
@@ -559,7 +575,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               
-                <p>本文永久链接是：<a href=http://supredu.github.io/2023/03/12/%E8%B7%A8%E9%93%BE%E6%A1%A5%E5%AD%A6%E4%B9%A0/>http://supredu.github.io/2023/03/12/%E8%B7%A8%E9%93%BE%E6%A1%A5%E5%AD%A6%E4%B9%A0/</a></p>
+                <p>本文永久链接是：<a href=http://supredu.github.io/2023/04/13/%E7%BB%88%E7%AB%AF%E4%BB%A3%E7%90%86%E9%85%8D%E7%BD%AE%E7%9A%84%E4%B8%80%E4%BA%9B%E7%BB%8F%E9%AA%8C/>http://supredu.github.io/2023/04/13/%E7%BB%88%E7%AB%AF%E4%BB%A3%E7%90%86%E9%85%8D%E7%BD%AE%E7%9A%84%E4%B8%80%E4%BA%9B%E7%BB%8F%E9%AA%8C/</a></p>
               
             
           </blockquote>
@@ -576,10 +592,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2023-03-12T20:11:25+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2023-04-13T15:16:45+08:00">
   <a class='notlink'>
     <i class="fas fa-edit GREENSEA fa-fw" aria-hidden="true"></i>
-    <p>更新于：2023年3月12日</p>
+    <p>更新于：2023年4月13日</p>
   </a>
 </div>
 
@@ -588,7 +604,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="../../../../tags/blockchain/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>blockchain</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="../../../../tags/DeFi/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>DeFi</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="../../../../tags/crosschain-bridge/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>crosschain-bridge</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="../../../../tags/%E7%BB%88%E7%AB%AF%E9%85%8D%E7%BD%AE/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>终端配置</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="../../../../tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>环境配置</p></a></div>
 
 
         
@@ -601,7 +617,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://supredu.github.io/2023/03/12/%E8%B7%A8%E9%93%BE%E6%A1%A5%E5%AD%A6%E4%B9%A0/&title=跨链桥学习 - supredu的博客&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://supredu.github.io/2023/04/13/%E7%BB%88%E7%AB%AF%E4%BB%A3%E7%90%86%E9%85%8D%E7%BD%AE%E7%9A%84%E4%B8%80%E4%BA%9B%E7%BB%8F%E9%AA%8C/&title=终端代理配置的一些经验 - supredu的博客&summary="
           
           >
           
@@ -613,7 +629,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://supredu.github.io/2023/03/12/%E8%B7%A8%E9%93%BE%E6%A1%A5%E5%AD%A6%E4%B9%A0/&title=跨链桥学习 - supredu的博客&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://supredu.github.io/2023/04/13/%E7%BB%88%E7%AB%AF%E4%BB%A3%E7%90%86%E9%85%8D%E7%BD%AE%E7%9A%84%E4%B8%80%E4%BA%9B%E7%BB%8F%E9%AA%8C/&title=终端代理配置的一些经验 - supredu的博客&summary="
           
           >
           
@@ -625,7 +641,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://supredu.github.io/2023/03/12/%E8%B7%A8%E9%93%BE%E6%A1%A5%E5%AD%A6%E4%B9%A0/&title=跨链桥学习 - supredu的博客&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://supredu.github.io/2023/04/13/%E7%BB%88%E7%AB%AF%E4%BB%A3%E7%90%86%E9%85%8D%E7%BD%AE%E7%9A%84%E4%B8%80%E4%BA%9B%E7%BB%8F%E9%AA%8C/&title=终端代理配置的一些经验 - supredu的博客&summary="
           
           >
           
@@ -655,15 +671,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='../../../04/13/%E7%BB%88%E7%AB%AF%E4%BB%A3%E7%90%86%E9%85%8D%E7%BD%AE%E7%9A%84%E4%B8%80%E4%BA%9B%E7%BB%8F%E9%AA%8C/'>
-          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>终端代理配置的一些经验</p>
-          <p class='content'>前言身为中国开发者，总是会遇到一些不可避免的网络问题，这个时候我们需要使用vpn软件。但是会有一个问题出现，为什么挂着梯子后浏览器可以访问外网，但是终端访问外网是却总是连接超时。今天我们就来研究...</p>
-        </a>
       
-      
-        <a class='next' href='../../11/Rollup%E5%AD%A6%E4%B9%A0/'>
-          <p class='title'>Rollup学习<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>什么是Rollup?在以太坊主链布置一个DeFi合约需要$25以上的gas费，这无疑是高昂的。所以像rollup这种layer2网络出现了，rollup的主要原理就是将大量的交易在一个快速的区块...</p>
+        <a class='next' href='../../../03/12/%E8%B7%A8%E9%93%BE%E6%A1%A5%E5%AD%A6%E4%B9%A0/'>
+          <p class='title'>跨链桥学习<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>什么是跨链桥跨链桥是一种解决多链之间可操作性低的工具，它允许你将资产从一条链转移到另一条链。
+跨链桥的类型单向桥允许你将资产转移到固定的链
+e.g. WBTC(Wrapped Bitcoin)允...</p>
         </a>
       
     </div>
@@ -706,7 +719,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E8%B7%A8%E9%93%BE%E6%A1%A5"><span class="toc-number">1.</span> <span class="toc-text">什么是跨链桥</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B7%A8%E9%93%BE%E6%A1%A5%E7%9A%84%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.</span> <span class="toc-text">跨链桥的类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%95%E5%90%91%E6%A1%A5"><span class="toc-number">2.1.</span> <span class="toc-text">单向桥</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8C%E5%90%91%E6%A1%A5"><span class="toc-number">2.2.</span> <span class="toc-text">双向桥</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%AD%E5%BF%83%E5%8C%96-%E4%BB%A3%E4%BF%9D%E7%AE%A1%E7%9A%84%E6%A1%A5"><span class="toc-number">2.3.</span> <span class="toc-text">中心化&#x2F;代保管的桥</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%BB%E4%B8%AD%E5%BF%83%E5%8C%96-%E6%97%A0%E4%BB%A3%E7%AE%A1%E7%9A%84%E6%A1%A5"><span class="toc-number">2.4.</span> <span class="toc-text">去中心化&#x2F;无代管的桥</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B7%A8%E9%93%BE%E8%BD%AC%E7%A7%BB%E6%96%B9%E5%BC%8F"><span class="toc-number">3.</span> <span class="toc-text">跨链转移方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E7%94%A8%E8%B7%A8%E9%93%BE%E6%A1%A5"><span class="toc-number">4.</span> <span class="toc-text">为什么用跨链桥</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%99%8D%E4%BD%8E%E7%BD%91%E7%BB%9C%E6%88%90%E6%9C%AC"><span class="toc-number">4.1.</span> <span class="toc-text">降低网络成本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E8%B5%9A%E5%8F%96%E6%94%B6%E7%9B%8A"><span class="toc-number">4.2.</span> <span class="toc-text">用户赚取收益</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B9%B3%E5%8F%B0%E6%96%B9%E6%89%A9%E5%A4%A7%E8%BF%90%E8%90%A5%E8%8C%83%E5%9B%B4"><span class="toc-number">4.3.</span> <span class="toc-text">平台方扩大运营范围</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%AE%E5%89%8D%E6%9C%80%E5%A4%A7%E7%9A%84%E8%B7%A8%E9%93%BE%E6%A1%A5"><span class="toc-number">5.</span> <span class="toc-text">目前最大的跨链桥</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B7%A8%E9%93%BE%E6%A1%A5%E5%AE%89%E5%85%A8%E5%90%97"><span class="toc-number">6.</span> <span class="toc-text">跨链桥安全吗</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="toc-number">2.</span> <span class="toc-text">准备工作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Clash"><span class="toc-number">2.1.</span> <span class="toc-text">Clash</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Vscode"><span class="toc-number">2.2.</span> <span class="toc-text">Vscode</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#www-icanhazip-com"><span class="toc-number">2.3.</span> <span class="toc-text">www.icanhazip.com</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#curl%E5%91%BD%E4%BB%A4%E5%92%8Cping%E5%91%BD%E4%BB%A4%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">2.4.</span> <span class="toc-text">curl命令和ping命令的区别</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AD%A3%E5%BC%8F%E6%B5%8B%E8%AF%95"><span class="toc-number">3.</span> <span class="toc-text">正式测试</span></a></li></ol>
     </div>
   </section>
 
@@ -725,7 +738,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <script>
   window.pdata={}
   pdata.ispage=true;
-  pdata.postTitle="跨链桥学习";
+  pdata.postTitle="终端代理配置的一些经验";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   // header 这里无论是否开启pjax都需要
