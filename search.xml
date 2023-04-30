@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>关于subgraph的一些总结</title>
+      <link href="/2023/04/30/%E5%85%B3%E4%BA%8Esubgraph%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%BB%E7%BB%93/"/>
+      <url>/2023/04/30/%E5%85%B3%E4%BA%8Esubgraph%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%BB%E7%BB%93/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Graph简介"><a href="#Graph简介" class="headerlink" title="Graph简介"></a>Graph简介</h2><p>Graph是一个索引协议，用于查询以太坊和IPFS等网络。任何人都可以建立和发布开放的API，称为子图，使数据易于访问。子图可以组成一个世界上所有公共信息的全球图。这些数据可以被转化、组织，并在不同的应用程序中分享，任何人只需按几个键就可以查询。</p><p>其中<strong>主要</strong>有四种角色，分别是开发者、索引人、策展人、委托人</p><h3 id="开发者"><a href="#开发者" class="headerlink" title="开发者"></a>开发者</h3><p>在去中心化应用中创建子图或使用现有子图</p><h3 id="索引人"><a href="#索引人" class="headerlink" title="索引人"></a>索引人</h3><p>操作节点以索引数据并提供查询</p><h3 id="策展人"><a href="#策展人" class="headerlink" title="策展人"></a>策展人</h3><p>通过在子图上发出信号来组织数据</p><h3 id="委托人"><a href="#委托人" class="headerlink" title="委托人"></a>委托人</h3><p>通过将GRT委托给索引人来保护网络</p><h2 id="subgraph（子图）"><a href="#subgraph（子图）" class="headerlink" title="subgraph（子图）"></a>subgraph（子图）</h2><p>子图可以组成一个世界上所有公共信息的全球图。这些数据可以被转化、组织，并在不同的应用程序中分享，任何人只需按几个键就可以查询。下面我们用一个简单的例子来介绍。</p><p>追踪的合约地址：0x9401518f4EBBA857BAA879D9f76E1Cc8b31ed197（mainnet）</p><p>子图地址：<a href="https://thegraph.com/studio/subgraph/weirdoghost">https://thegraph.com/studio/subgraph/weirdoghost</a></p><p>子图定义由几个文件组成：</p><ul><li><p><code>subgraph.yaml</code>: 包含子图清单的 YAML 文件</p><p><img src="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230430225757857.png" class="lazyload" data-srcset="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230430225757857.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20230430225757857"></p><ul><li><code>dataSources.source</code>: the address of the smart contract the subgraph sources, and the ABI of the smart contract to use. The address is optional; omitting it allows to index matching events from all contracts.</li><li><code>dataSources.source.startBlock</code>: the optional number of the block that the data source starts indexing from. In most cases, we suggest using the block in which the contract was created.</li><li><code>dataSources.mapping.entities</code>: the entities that the data source writes to the store. The schema for each entity is defined in the schema.graphql file.</li><li><code>dataSources.mapping.abis</code>：源合约以及您在映射中与之交互的任何其他智能合约的一个或多个命名 ABI 文件。</li><li><code>dataSources.mapping.eventHandlers</code>：列出此子图响应的智能合约事件，映射中的处理程序—示例中为./src/mapping.ts—也将这些事件转换为存储中的实体。</li><li><code>dataSources.mapping.callHandlers</code>：列出此子图响应的智能合约函数以及映射中的处理程序，该映射将输入和输出转换为函数调用到存储中的实体。</li><li><code>dataSources.mapping.blockHandlers</code>: lists the blocks this subgraph reacts to and handlers in the mapping to run when a block is appended to the chain. Without a filter, the block handler will be run every block. An optional call-filter can be provided by adding a <code>filter</code> field with <code>kind: call</code> to the handler. This will only run the handler if the block contains at least one call to the data source contract.</li></ul></li><li><p><code>schema.graphql</code>: 一个 GraphQL 模式文件，它定义了为您的子图存储哪些数据，以及如何通过 GraphQL 查询这些数据</p><p><img src="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230430225821292.png" class="lazyload" data-srcset="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230430225821292.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20230430225821292">zai</p><p>在定义实体之前，重要的是要退后一步，思考数据的结构和链接方式。 所有查询都将针对子图模式中定义的数据模型和子图索引的实体进行。 因此，最好以符合 dapp 需求的方式定义子图模式。 将实体想象为“包含数据的对象”，而不是事件或函数，可能很有用。在例子中我们定义了两种实体，token和user。token的属性有id，tokenId,owner,tokenURI,user的属性有id,balances,tokens，其中带！的属性代表entity创立时该属性不能为空。通过@derivedfrom，我们将token的owner和user的tokens进行了一个多对一映射。</p></li><li><p><code>AssemblyScript映射</code>: 将事件数据转换为模式中定义的实体(例如本教程中的weirdo-ghost-gang.ts)的 <a href="https://github.com/AssemblyScript/assemblyscript">AssemblyScript</a> 代码</p></li></ul><p><img src="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230430225926849.png" class="lazyload" data-srcset="https://hexoimagehost.oss-cn-chengdu.aliyuncs.com/img/image-20230430225926849.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20230430225926849"></p><p>映射从特定的源获取数据，并将其转换为在模式中定义的实体。映射是在TypeScript的一个子集中编写的，称为AssemblyScript，可以编译为WASM（WebAssembly）。AssemblyScript比普通TypeScript更严格，但提供了熟悉的语法。<br>对于子图中定义的每个事件处理程序。映射下的yaml。eventHandlers创建一个同名的导出函数。每个处理程序都必须接受一个名为event的参数，该参数的类型与正在处理的事件的名称相对应。</p><p>在例子中我们完成了TransferEvent事件的handler，每当转账发生，我们读取token实体，如果没有则创建新token实体。同理对user实体进行处理，当需要调用合约时，我们将合约地址与schema中生成的合约工厂链接，给user的balances属性进行赋值。note:对于实体的读取必须有是否为空的判断，同时生成完一定要使用save进行保存哦。</p><h2 id="官方文档地址"><a href="#官方文档地址" class="headerlink" title="官方文档地址"></a>官方文档地址</h2><p><a href="https://thegraph.com/docs/zh/developing">https://thegraph.com/docs/zh/developing</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> web3-infrastructure </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> blockchain </tag>
+            
+            <tag> dapp </tag>
+            
+            <tag> infrastructure </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>终端代理配置的一些经验</title>
       <link href="/2023/04/13/%E7%BB%88%E7%AB%AF%E4%BB%A3%E7%90%86%E9%85%8D%E7%BD%AE%E7%9A%84%E4%B8%80%E4%BA%9B%E7%BB%8F%E9%AA%8C/"/>
       <url>/2023/04/13/%E7%BB%88%E7%AB%AF%E4%BB%A3%E7%90%86%E9%85%8D%E7%BD%AE%E7%9A%84%E4%B8%80%E4%BA%9B%E7%BB%8F%E9%AA%8C/</url>
